@@ -1,4 +1,5 @@
 import './App.css';
+import data from './data.js';
 import { Nav } from './components/Nav';
 import { About } from './components/About';
 import { Projects } from './components/Projects';
@@ -8,7 +9,7 @@ function App() {
     <div className="App">
       <Nav />
       <About />
-      <Projects />
+      <Projects data={data}/>
     </div>
   );
 }

@@ -3,13 +3,17 @@ import styled from '@emotion/styled';
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from '@mui/material';
 
 const Container = styled.div`
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border: 2px solid red;
     padding: 20px;
+    position: sticky;
+    background-color: grey;
     p {
         margin: 0px;
     }
@@ -52,7 +56,7 @@ export const Nav = () => {
         >
         <MenuItem onClick={handleThing}>About</MenuItem>
         <MenuItem onClick={handleClose}>Work Experience</MenuItem>
-        <MenuItem onClick={handleClose}>Projects</MenuItem>
+        <MenuItem component="a" href="#projects" onClick={handleClose}>Projects</MenuItem>
         <MenuItem onClick={handleClose}>Resume</MenuItem>
         </Menu>
     </Container>
